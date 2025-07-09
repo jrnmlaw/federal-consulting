@@ -16,7 +16,27 @@
       color: #000000;
     }
 
-    /* Container with responsive max width */
+    /* Sticky header */
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background-color: #2c3e50;
+      color: #ffffff;
+      padding: 10px 20px;
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sticky-header div {
+      margin: 2px 0;
+    }
+
+    /* Container */
     .container {
       max-width: 800px;
       width: 90%;
@@ -51,7 +71,7 @@
       font-size: 1.2rem;
     }
 
-    /* Paragraphs & Lists */
+    /* Text and Lists */
     p, li {
       text-align: justify;
       font-size: 1rem;
@@ -69,7 +89,7 @@
       margin-bottom: 30px;
     }
 
-    /* Callout box */
+    /* Callout Box */
     .lets-talk-box {
       border: 1px solid #2c3e50;
       background-color: #f9f9f9;
@@ -94,7 +114,7 @@
       border-top: 1px solid #e0e0e0;
     }
 
-    /* Responsive Typography */
+    /* Responsive adjustments */
     @media screen and (max-width: 600px) {
       h1 {
         font-size: 1.6rem;
@@ -124,10 +144,23 @@
       .lets-talk-box {
         padding: 15px;
       }
+
+      .sticky-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+      }
     }
   </style>
 </head>
 <body>
+
+  <div class="sticky-header">
+    <div><strong>John Rogers</strong></div>
+    <div>📞 (503) 544-9468</div>
+    <div>📧 john@jrnmlaw.com</div>
+  </div>
+
   <div class="container">
     <div class="main-content">
 
@@ -183,8 +216,8 @@
         <h2>Let’s Talk</h2>
         <p>If your organization is preparing to collaborate with a DOE lab, DoD facility, or other federally funded research and development center (FFRDC), I can help ensure you’re well-positioned—both contractually and strategically.</p>
         <p>
-          📧 <strong>Email:</strong> [Email]<br>
-          📞 <strong>Phone:</strong> [Phone Number]<br>
+          📧 <strong>Email:</strong> john@jrnmlaw.com<br>
+          📞 <strong>Phone:</strong> (503) 544-9468<br>
           🔗 <strong>LinkedIn:</strong> [LinkedIn URL]
         </p>
         <p class="disclaimer"><em>Note: While I am a licensed attorney, my consulting services do not constitute legal representation unless expressly agreed to in writing. Any legal advice or representation will be clearly defined through a formal engagement consistent with applicable rules of professional conduct.</em></p>
@@ -194,10 +227,43 @@
         <h2>Real-World Use Cases: Strategic Support Across Sectors</h2>
         <p>The path to collaboration with national laboratories is rarely one-size-fits-all. From navigating statutory authorities to negotiating data rights and agreement terms, each engagement presents unique challenges depending on the technology area, funding mechanism, and agency mission. Below are examples of how my consulting services have helped companies across diverse sectors—from fusion energy to quantum computing—structure more effective, efficient, and strategically sound partnerships with DOE and other federal labs.</p>
 
-        <!-- Use Case entries (unchanged for brevity, same as previous version) -->
+        <div class="use-case">
+          <h3>Use Case 1: Fusion Energy Startup Navigating a CRADA with a DOE Lab</h3>
+          <p><strong>How I Help:</strong> I assist the client in understanding the CRADA process, identifying negotiable terms, and flagging critical IP and technical data rights provisions. By preparing the company for institutional requirements—including export control screening and restricted data considerations—I help reduce delays and align the agreement with the company's long-term commercialization goals.</p>
+          <p><strong>Outcome:</strong> Faster agreement execution, improved understanding of IP rights retention, and a more collaborative working relationship with the lab’s technology transfer and legal teams.</p>
+        </div>
+
+        <div class="use-case">
+          <h3>Use Case 2: SMR Developer Seeking to Fund R&D Through an SPP Agreement</h3>
+          <p><strong>How I Help:</strong> I advise the company on the nuances of SPP authority, especially where export control, classification, and data dissemination restrictions apply. I work with the client to define a compliant statement of work, navigate pre-negotiation discussions, and understand how the Atomic Energy Act may limit downstream data use or publication.</p>
+          <p><strong>Outcome:</strong> A clear project scope aligned with DOE mission space and legal requirements, an executed SPP agreement with minimal rework, and safeguards in place for proprietary modeling tools and inputs.</p>
+        </div>
+
+        <div class="use-case">
+          <h3>Use Case 3: AI Surveillance Firm Engaging with a National Lab on Autonomy R&D</h3>
+          <p><strong>How I Help:</strong> I help the client assess appropriate engagement mechanisms (e.g., CRADA vs. User Agreement) and advise on the allocation of intellectual property arising from jointly developed software. I also flag potential concerns around government use rights, background IP protections, and publication delays due to DoD review requirements.</p>
+          <p><strong>Outcome:</strong> The client enters negotiations well-informed, avoids post-award surprises, and secures favorable terms for future commercialization of the AI stack—all while maintaining compliance with federal obligations.</p>
+        </div>
+
+        <div class="use-case">
+          <h3>Use Case 4: Quantum Technology Company Pursuing a User Agreement for Shared Lab Access</h3>
+          <p><strong>How I Help:</strong> I guide the client through the lab’s facility access and user agreement process, clarifying key differences between proprietary and non-proprietary research terms. I help structure the project to align with the lab’s policies while protecting the company’s pre-existing IP and data rights, including how any resulting technical data will be handled.</p>
+          <p><strong>Outcome:</strong> The company secures facility access under a favorable agreement, with clear boundaries around data sharing, publication, and background technology—accelerating R&D timelines while minimizing legal risk.</p>
+        </div>
+
+        <div class="use-case">
+          <h3>Use Case 5: Cybersecurity Firm Collaborating on Critical Infrastructure Resilience</h3>
+          <p><strong>How I Help:</strong> I advise the company on structuring the collaboration under a CRADA, ensuring that data classification, publication restrictions, and foreign national access controls are clearly understood. I also help the client assert appropriate rights in their background technology and define terms for joint software development and evaluation metrics.</p>
+          <p><strong>Outcome:</strong> The company negotiates a CRADA that preserves IP, accommodates classified or sensitive data protocols, and establishes a shared roadmap for future joint development opportunities.</p>
+        </div>
+
+        <div class="use-case">
+          <h3>Use Case 6: Advanced Materials Manufacturer Licensing a National Lab Innovation</h3>
+          <p><strong>How I Help:</strong> I support the client in parallel licensing and SPP negotiations—advising on license terms, field-of-use definitions, and royalty structures, while coordinating the SPP agreement to allow for proprietary technical inputs. I also help the company evaluate the Bayh-Dole implications for any new inventions that may arise under the collaboration.</p>
+          <p><strong>Outcome:</strong> The company secures both a commercial license and a custom SPP agreement, enabling early product development with reduced legal ambiguity around ownership, improvements, and commercialization rights.</p>
+        </div>
 
       </div>
-
     </div>
   </div>
 </body>
