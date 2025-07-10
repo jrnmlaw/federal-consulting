@@ -32,17 +32,10 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
-    .sticky-header div:first-child {
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-    .sticky-header div:not(:first-child) {
-      font-size: 0.95rem;
-    }
-
     .sticky-header div {
       margin: 0 10px;
+      font-weight: normal;
+      font-size: 0.95rem;
     }
 
     .container {
@@ -156,7 +149,7 @@
     <div>John Rogers</div>
     <div id="phone-header"></div>
     <div id="email-header"></div>
-    <noscript><div>📞 (503) 544-9468<br>📧 john@jrnmlaw.com</div></noscript>
+    <noscript><div>(503) 544-9468<br>john@jrnmlaw.com</div></noscript>
   </div>
 
   <div class="container">
@@ -267,15 +260,11 @@
   </div>
 
   <script>
-    // Email and phone strings
     const email = 'john' + '@' + 'jrnmlaw.com';
     const phone = '(503) ' + '544' + '-' + '9468';
 
-    // Sticky Header
-    document.getElementById('email-header').innerHTML = '📧 ' + email;
-    document.getElementById('phone-header').innerHTML = '📞 ' + phone;
-
-    // Let's Talk Section
+    document.getElementById('email-header').innerHTML = email;
+    document.getElementById('phone-header').innerHTML = phone;
     document.getElementById('email-talk').innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
     document.getElementById('phone-talk').innerHTML = phone;
   </script>
