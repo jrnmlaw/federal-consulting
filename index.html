@@ -5,18 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Federal Lab Engagement & Tech Transfer Consulting</title>
   <style>
-    /* Base layout */
     body {
       font-family: "Times New Roman", Times, serif;
       margin: 0;
       padding: 0;
-      font-size: 1rem;
-      line-height: 1.75;
+      font-size: 1.05rem;
+      line-height: 1.8;
       background-color: #ffffff;
       color: #000000;
     }
 
-    /* Sticky header */
     .sticky-header {
       position: sticky;
       top: 0;
@@ -36,7 +34,6 @@
       margin: 2px 0;
     }
 
-    /* Container */
     .container {
       max-width: 800px;
       width: 90%;
@@ -49,7 +46,6 @@
       padding: 20px;
     }
 
-    /* Headings */
     h1, h2, h3 {
       font-family: Arial, sans-serif;
       font-weight: 300;
@@ -71,10 +67,9 @@
       font-size: 1.2rem;
     }
 
-    /* Text and Lists */
     p, li {
       text-align: justify;
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
 
     ul {
@@ -86,14 +81,13 @@
     }
 
     .use-case {
-      border-left: 2px solid #ccc;
-      padding-left: 15px;
       margin-bottom: 30px;
+      border-left: 4px solid #2c3e50;
+      padding-left: 15px;
     }
 
-    /* Callout Box */
     .lets-talk-box {
-      border: 1px solid #ccc;
+      border: 1px solid #2c3e50;
       background-color: #f9f9f9;
       padding: 20px;
       margin: 40px 0;
@@ -116,33 +110,18 @@
       border-top: 1px solid #e0e0e0;
     }
 
-    /* Responsive adjustments */
     @media screen and (max-width: 600px) {
-      h1 {
-        font-size: 1.6rem;
-      }
-
-      h2 {
-        font-size: 1.3rem;
-      }
-
-      h3 {
-        font-size: 1.1rem;
-      }
+      h1 { font-size: 1.6rem; }
+      h2 { font-size: 1.3rem; }
+      h3 { font-size: 1.1rem; }
 
       body {
         font-size: 1rem;
         line-height: 1.6;
       }
 
-      .container {
-        padding: 15px;
-      }
-
-      .main-content {
-        padding: 15px;
-      }
-
+      .container,
+      .main-content,
       .lets-talk-box {
         padding: 15px;
       }
@@ -159,8 +138,9 @@
 
   <div class="sticky-header">
     <div>John Rogers</div>
-    <div>📞 (503) 544-9468</div>
-    <div>📧 john@jrnmlaw.com</div>
+    <div id="phone-header"></div>
+    <div id="email-header"></div>
+    <noscript><div>📞 (503) 544-9468<br>📧 john@jrnmlaw.com</div></noscript>
   </div>
 
   <div class="container">
@@ -218,11 +198,12 @@
         <h2>Let’s Talk</h2>
         <p>If your organization is preparing to collaborate with a DOE lab, DoD facility, or other federally funded research and development center (FFRDC), I can help ensure you’re well-positioned—both contractually and strategically.</p>
         <p>
-          📧 <strong>Email:</strong> john@jrnmlaw.com<br>
-          📞 <strong>Phone:</strong> (503) 544-9468<br>
+          📧 <strong>Email:</strong> <span id="email-talk"></span><br>
+          📞 <strong>Phone:</strong> <span id="phone-talk"></span><br>
           🔗 <strong>LinkedIn:</strong> [LinkedIn URL]
         </p>
         <p class="disclaimer"><em>Note: While I am a licensed attorney, my consulting services do not constitute legal representation unless expressly agreed to in writing. Any legal advice or representation will be clearly defined through a formal engagement consistent with applicable rules of professional conduct.</em></p>
+        <noscript><p><strong>Email:</strong> john@jrnmlaw.com<br><strong>Phone:</strong> (503) 544-9468</p></noscript>
       </div>
 
       <div class="section">
@@ -268,5 +249,19 @@
       </div>
     </div>
   </div>
+
+  <script>
+    // Email and phone strings
+    const email = 'john' + '@' + 'jrnmlaw.com';
+    const phone = '(503) ' + '544' + '-' + '9468';
+
+    // Sticky Header
+    document.getElementById('email-header').innerHTML = '📧 ' + email;
+    document.getElementById('phone-header').innerHTML = '📞 ' + phone;
+
+    // Let's Talk Section
+    document.getElementById('email-talk').innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+    document.getElementById('phone-talk').innerHTML = phone;
+  </script>
 </body>
 </html>
