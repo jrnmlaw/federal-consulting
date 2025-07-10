@@ -25,13 +25,24 @@
       font-family: Arial, sans-serif;
       font-size: 0.95rem;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
+      gap: 30px;
+      border-bottom: 1px solid #1a252f;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .sticky-header div:first-child {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .sticky-header div:not(:first-child) {
+      font-size: 0.95rem;
     }
 
     .sticky-header div {
-      margin: 2px 0;
+      margin: 0 10px;
     }
 
     .container {
@@ -130,6 +141,11 @@
         flex-direction: column;
         text-align: center;
         padding: 10px;
+        gap: 10px;
+      }
+
+      .sticky-header div {
+        margin: 2px 0;
       }
     }
   </style>
