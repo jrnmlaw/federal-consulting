@@ -9,69 +9,50 @@
       font-family: "Times New Roman", Times, serif;
       margin: 0;
       padding: 0;
-      font-size: 1.08rem;
-      line-height: 1.85;
+      font-size: 1.05rem;
+      line-height: 1.8;
       background-color: #ffffff;
-      color: #111;
+      color: #000000;
     }
 
-    /* Sticky Header */
     .sticky-header {
       position: sticky;
       top: 0;
       z-index: 999;
       background-color: #2c3e50;
       color: #ffffff;
-      padding: 10px 10px;
+      padding: 10px 20px;
       font-family: Arial, sans-serif;
       font-size: 0.95rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 15px;
+      gap: 30px;
       border-bottom: 1px solid #1a252f;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
     .sticky-header div {
-      margin: 0 5px;
+      margin: 0 10px;
       font-weight: normal;
       font-size: 0.95rem;
     }
 
-    .contact-btn {
-      background-color: #3a87bd;
-      color: white;
-      border: none;
-      border-radius: 3px;
-      padding: 6px 12px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-family: Arial, sans-serif;
-      transition: background-color 0.2s ease;
-    }
-
-    .contact-btn:hover {
-      background-color: #336f9b;
-    }
-
-    /* Layout */
     .container {
-      max-width: 760px;
+      max-width: 800px;
       width: 90%;
       margin: 0 auto;
-      padding: 24px;
+      padding: 20px;
     }
 
     .main-content {
       background-color: #ffffff;
-      padding: 24px;
+      padding: 20px;
     }
 
-    /* Typography */
     h1, h2, h3 {
       font-family: Arial, sans-serif;
-      font-weight: 400;
+      font-weight: 300;
       color: #2c3e50;
       margin-top: 1.5em;
       margin-bottom: 0.5em;
@@ -79,25 +60,20 @@
     }
 
     h1 {
-      font-size: 2.1rem;
-      color: #1f2d3a;
+      font-size: 2rem;
     }
 
     h2 {
-      font-size: 1.55rem;
-      color: #2b4c68;
-      border-left: 4px solid #3a87bd;
-      padding-left: 10px;
+      font-size: 1.5rem;
     }
 
     h3 {
-      font-size: 1.25rem;
-      color: #2c3e50;
+      font-size: 1.2rem;
     }
 
     p, li {
       text-align: justify;
-      font-size: 1.08rem;
+      font-size: 1.05rem;
     }
 
     ul {
@@ -108,25 +84,18 @@
       margin-bottom: 40px;
     }
 
-    /* Use Case styling */
     .use-case {
       margin-bottom: 30px;
-      border-left: 3px solid #3a87bd;
+      border-left: 2px solid #ccc;
       padding-left: 15px;
-      background-color: #f7f9fb;
-      border-radius: 4px;
-      padding-top: 10px;
-      padding-bottom: 10px;
     }
 
-    /* Let's Talk Box */
     .lets-talk-box {
       border: 1px solid #ccc;
       background-color: #f9f9f9;
-      padding: 24px;
-      margin: 50px 0;
-      border-radius: 6px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      padding: 20px;
+      margin: 40px 0;
+      border-radius: 4px;
     }
 
     .lets-talk-box p {
@@ -138,15 +107,13 @@
       color: #555;
     }
 
-    /* HR */
     hr {
       width: 50%;
       margin: 30px auto;
       border: 0;
-      border-top: 1px solid #dcdcdc;
+      border-top: 1px solid #e0e0e0;
     }
 
-    /* Responsive Design */
     @media screen and (max-width: 600px) {
       h1 { font-size: 1.6rem; }
       h2 { font-size: 1.3rem; }
@@ -154,7 +121,7 @@
 
       body {
         font-size: 1rem;
-        line-height: 1.7;
+        line-height: 1.6;
       }
 
       .container,
@@ -167,15 +134,11 @@
         flex-direction: column;
         text-align: center;
         padding: 10px;
-        gap: 8px;
+        gap: 10px;
       }
 
       .sticky-header div {
         margin: 2px 0;
-      }
-
-      .contact-btn {
-        margin-top: 4px;
       }
     }
   </style>
@@ -186,8 +149,7 @@
     <div>John Rogers</div>
     <div id="phone-header"></div>
     <div id="email-header"></div>
-    <a class="contact-btn" href="#contact">Contact</a>
-    <noscript><div>(503) 544-9468&nbsp;|&nbsp;john@jrnmlaw.com</div></noscript>
+    <noscript><div>(503) 544-9468<br>john@jrnmlaw.com</div></noscript>
   </div>
 
   <div class="container">
@@ -241,13 +203,13 @@
         <p>I’m not just familiar with the agreements—I understand how they are implemented within the context of Federal authority and mission-driven R&D environments.</p>
       </div>
 
-      <div id="contact" class="lets-talk-box">
+      <div class="lets-talk-box">
         <h2>Let’s Talk</h2>
         <p>If your organization is preparing to collaborate with a DOE lab, DoD facility, or other federally funded research and development center (FFRDC), I can help ensure you’re well-positioned—both contractually and strategically.</p>
         <p>
-          <strong>Email:</strong> <span id="email-talk"></span><br>
-          <strong>Phone:</strong> <span id="phone-talk"></span><br>
-          <strong>LinkedIn:</strong> [LinkedIn URL]
+          📧 <strong>Email:</strong> <span id="email-talk"></span><br>
+          📞 <strong>Phone:</strong> <span id="phone-talk"></span><br>
+          🔗 <strong>LinkedIn:</strong> [LinkedIn URL]
         </p>
         <p class="disclaimer"><em>Note: While I am a licensed attorney, my consulting services do not constitute legal representation unless expressly agreed to in writing. Any legal advice or representation will be clearly defined through a formal engagement consistent with applicable rules of professional conduct.</em></p>
         <noscript><p><strong>Email:</strong> john@jrnmlaw.com<br><strong>Phone:</strong> (503) 544-9468</p></noscript>
@@ -256,6 +218,7 @@
       <div class="section">
         <h2>Real-World Use Cases: Strategic Support Across Sectors</h2>
         <p>The path to collaboration with national laboratories is rarely one-size-fits-all. From navigating statutory authorities to negotiating data rights and agreement terms, each engagement presents unique challenges depending on the technology area, funding mechanism, and agency mission. Below are examples of how my consulting services have helped companies across diverse sectors—from fusion energy to quantum computing—structure more effective, efficient, and strategically sound partnerships with DOE and other federal labs.</p>
+
         <div class="use-case">
           <h3>Use Case 1: Fusion Energy Startup Navigating a CRADA with a DOE Lab</h3>
           <p><strong>How I Help:</strong> I assist the client in understanding the CRADA process, identifying negotiable terms, and flagging critical IP and technical data rights provisions. By preparing the company for institutional requirements—including export control screening and restricted data considerations—I help reduce delays and align the agreement with the company's long-term commercialization goals.</p>
