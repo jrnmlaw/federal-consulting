@@ -15,6 +15,338 @@
       color: #000000;
     }
 
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background-color: #2c3e50;
+      color: #ffffff;
+      padding: 10px 20px;
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      border-bottom: 1px solid #1a252f;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .sticky-header div {
+      margin: 0 10px;
+      font-weight: normal;
+      font-size: 0.95rem;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .main-content {
+      background-color: #ffffff;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      font-family: Arial, sans-serif;
+      font-weight: 300;
+      color: #2c3e50;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      line-height: 1.3;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p, li {
+      text-align: justify;
+      font-size: 1.05rem;
+    }
+
+    ul {
+      padding-left: 1.2em;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .use-case {
+      border-left: 3px solid #ccc;
+      margin-bottom: 15px;
+      padding: 0 15px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+    }
+
+    .accordion-header {
+      cursor: pointer;
+      background-color: #eef1f5;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 1.1rem;
+      padding: 12px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion-header:hover {
+      background-color: #e3e7ec;
+    }
+
+    .accordion-header::after {
+      content: "+";
+      font-weight: bold;
+      color: #2c3e50;
+      margin-left: 10px;
+    }
+
+    .accordion-header.active::after {
+      content: "–";
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 0 12px 12px 12px;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .expand-all-btn {
+      display: inline-block;
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      margin-bottom: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .expand-all-btn:hover {
+      background-color: #1a252f;
+    }
+
+    .lets-talk-box {
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin: 40px 0;
+      border-radius: 4px;
+    }
+
+    .lets-talk-box p {
+      margin-bottom: 15px;
+    }
+
+    .disclaimer {
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    hr {
+      width: 50%;
+      margin: 30px auto;
+      border: 0;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 { font-size: 1.6rem; }
+      h2 { font-size: 1.3rem; }
+      h3 { font-size: 1.1rem; }
+
+      body {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .container,
+      .main-content,
+      .lets-talk-box {
+        padding: 15px;
+      }
+
+      .sticky-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        gap: 10px;
+      }
+
+      .sticky-header div {
+        margin: 2px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sticky-header">
+    <div>John Rogers</div>
+    <div id="phone-header"></div>
+    <div id="email-header"></div>
+    <noscript><div>(503) 544-9468<br>john@jrnmlaw.com</div></noscript>
+  </div>
+
+  <div class="container">
+    <div class="main-content">
+
+      <div class="section">
+        <h1>Federal Lab Engagement & Tech Transfer Consulting</h1>
+        <h2>Helping Industry Navigate Federal Laboratory Agreements with Clarity and Confidence</h2>
+        <p>With years of experience working within the Department of Energy (DOE) National Laboratory system, I provide specialized consulting for companies seeking to partner with DOE, the Department of Defense (DoD), or other Federal laboratory and research institutions. Whether you’re preparing to engage through a Cooperative Research and Development Agreement (CRADA), Strategic Partnership Project (SPP), or other collaborative mechanism, expert advice and guidance can lead to more efficient, strategic navigation of Federal processes and requirements. I help you navigate the legal and procedural landscape with clarity and strategy.</p>
+      </div>
+
+      <hr>
+
+      <div class="section">
+        <h2>Real-World Use Cases: Strategic Support Across Sectors</h2>
+        <p>The path to collaboration with national laboratories is rarely one-size-fits-all. From navigating statutory authorities to negotiating data rights and agreement terms, each engagement presents unique challenges depending on the technology area, funding mechanism, and agency mission. Below are examples of how my consulting services have helped companies across diverse sectors—from fusion energy to quantum computing—structure more effective, efficient, and strategically sound partnerships with DOE and other federal labs.</p>
+
+        <button class="expand-all-btn" id="toggleAll">Expand All</button>
+
+        <div class="use-case">
+          <button class="accordion-header">Use Case 1: Fusion Energy Startup Navigating a CRADA with a DOE Lab</button>
+          <div class="accordion-content">
+            <p><strong>How I Help:</strong> I assist the client in understanding the CRADA process, identifying negotiable terms, and flagging critical IP and technical data rights provisions. By preparing the company for institutional requirements—including export control screening and restricted data considerations—I help reduce delays and align the agreement with the company's long-term commercialization goals.</p>
+            <p><strong>Outcome:</strong> Faster agreement execution, improved understanding of IP rights retention, and a more collaborative working relationship with the lab’s technology transfer and legal teams.</p>
+          </div>
+        </div>
+
+        <div class="use-case">
+          <button class="accordion-header">Use Case 2: SMR Developer Seeking to Fund R&D Through an SPP Agreement</button>
+          <div class="accordion-content">
+            <p><strong>How I Help:</strong> I advise the Small Modular Reactor (SMR) developer on the nuances of SPP authority, especially where export control, classification, and data dissemination restrictions apply. I work with the client to define a compliant statement of work, navigate pre-negotiation discussions, and understand how the Atomic Energy Act may limit downstream data use or publication.</p>
+            <p><strong>Outcome:</strong> A clear project scope aligned with DOE mission space and legal requirements, an executed SPP agreement with minimal rework, and safeguards in place for proprietary modeling tools and inputs.</p>
+          </div>
+        </div>
+
+        <div class="use-case">
+          <button class="accordion-header">Use Case 3: AI Surveillance Firm Engaging with a National Lab on Autonomy R&D</button>
+          <div class="accordion-content">
+            <p><strong>How I Help:</strong> I help the client assess appropriate engagement mechanisms (e.g., CRADA vs. User Agreement) and advise on the allocation of intellectual property arising from jointly developed software. I also flag potential concerns around government use rights, background IP protections, and publication delays due to DoD review requirements.</p>
+            <p><strong>Outcome:</strong> The client enters negotiations well-informed, avoids post-award surprises, and secures favorable terms for future commercialization of the AI stack—all while maintaining compliance with federal obligations.</p>
+          </div>
+        </div>
+
+        <div class="use-case">
+          <button class="accordion-header">Use Case 4: Quantum Technology Company Pursuing a User Agreement</button>
+          <div class="accordion-content">
+            <p><strong>How I Help:</strong> I guide the client through the lab’s facility access and user agreement process, clarifying key differences between proprietary and non-proprietary research terms. I help structure the project to align with the lab’s policies while protecting the company’s pre-existing IP and data rights, including how any resulting technical data will be handled.</p>
+            <p><strong>Outcome:</strong> The company secures facility access under a favorable agreement, with clear boundaries around data sharing, publication, and background technology—accelerating R&D timelines while minimizing legal risk.</p>
+          </div>
+        </div>
+
+        <div class="use-case">
+          <button class="accordion-header">Use Case 5: Cybersecurity Firm Collaborating on Critical Infrastructure Resilience</button>
+          <div class="accordion-content">
+            <p><strong>How I Help:</strong> I advise the company on structuring the collaboration under a CRADA, ensuring that data classification, publication restrictions, and foreign national access controls are clearly understood. I also help the client assert appropriate rights in their background technology and define terms for joint software development and evaluation metrics.</p>
+            <p><strong>Outcome:</strong> The company negotiates a CRADA that preserves IP, accommodates classified or sensitive data protocols, and establishes a shared roadmap for future joint development opportunities.</p>
+          </div>
+        </div>
+
+        <div class="use-case">
+          <button class="accordion-header">Use Case 6: Advanced Materials Manufacturer Licensing a National Lab Innovation</button>
+          <div class="accordion-content">
+            <p><strong>How I Help:</strong> I support the client in parallel licensing and SPP negotiations—advising on license terms, field-of-use definitions, and royalty structures, while coordinating the SPP agreement to allow for proprietary technical inputs. I also help the company evaluate the Bayh-Dole implications for any new inventions that may arise under the collaboration.</p>
+            <p><strong>Outcome:</strong> The company secures both a commercial license and a custom SPP agreement, enabling early product development with reduced legal ambiguity around ownership, improvements, and commercialization rights.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const email = 'john' + '@' + 'jrnmlaw.com';
+    const phone = '(503) ' + '544' + '-' + '9468';
+    document.getElementById('email-header').innerHTML = email;
+    document.getElementById('phone-header').innerHTML = phone;
+
+    const accordions = document.querySelectorAll('.accordion-header');
+    accordions.forEach(header => {
+      header.addEventListener('click', () => {
+        header.classList.toggle('active');
+        const content = header.nextElementSibling;
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+        } else {
+          content.style.display = 'block';
+        }
+      });
+    });
+
+    const toggleAllBtn = document.getElementById('toggleAll');
+    let allExpanded = false;
+    toggleAllBtn.addEventListener('click', () => {
+      allExpanded = !allExpanded;
+      accordions.forEach(header => {
+        const content = header.nextElementSibling;
+        if (allExpanded) {
+          content.style.display = 'block';
+          header.classList.add('active');
+        } else {
+          content.style.display = 'none';
+          header.classList.remove('active');
+        }
+      });
+      toggleAllBtn.textContent = allExpanded ? 'Collapse All' : 'Expand All';
+    });
+  </script>
+</body>
+</html>
+ChatGPT said:
+
+Here’s a fully revised index.html implementing your requested changes:
+
+Sticky header moved to a fixed footer.
+
+H1 element turned into a hero section with stylized background.
+
+Email and phone obfuscated in the “Let’s Talk” section.
+
+All your original content preserved, including accordions.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Federal Lab Engagement & Tech Transfer Consulting</title>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      margin: 0;
+      padding: 0;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
     /* Hero header */
     .hero {
       position: relative;
