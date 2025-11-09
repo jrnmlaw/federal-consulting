@@ -144,6 +144,24 @@
 
     .disclaimer { font-size: 0.9em; color: #555; }
 
+    .headshot-float {
+      float: right;
+      width: 120px; /* Adjust size */
+      height: auto;
+      margin: 0 0 10px 15px; /* space around image */
+      border-radius: 50%; /* optional circular */
+    }
+    
+    /* Mobile: stack image above paragraph */
+    @media screen and (max-width: 600px) {
+      .headshot-float {
+        float: none;
+        display: block;
+        margin: 0 auto 15px auto;
+        max-width: 100px;
+      }
+    }
+
     hr {
       width: 50%;
       margin: 30px auto;
@@ -262,12 +280,17 @@
 
       <div class="lets-talk-box">
         <h2>Let’s Talk</h2>
-        <p>If your organization is preparing to engage with a DOE lab, DoD facility, or other federally funded research and development center (FFRDC), I can help ensure you’re well-positioned—both contractually and strategically.</p>
+        <p>
+          <img src="https://i.imgur.com/TbgUbvH.jpeg" alt="John Rogers Headshot" class="headshot-float">
+          If your organization is preparing to collaborate with a DOE lab, DoD facility, or other federally funded research and development center (FFRDC), I can help ensure you’re well-positioned—both contractually and strategically.
+        </p>
+      
         <p>
           📧 <strong>Email:</strong> <span id="email-talk"></span><br>
-          🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rogersjohn/" target="_blank" rel="noopener noreferrer">/in/rogersjohn/</a>
+          🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rogersjohn/" target="_blank">www.linkedin.com/in/rogersjohn/</a>
           <span id="phone-talk" style="display:none;"></span>
         </p>
+      
         <p class="disclaimer"><em>Note: While I am a licensed attorney, my consulting services do not constitute legal representation unless expressly agreed to in writing. Any legal advice or representation will be clearly defined through a formal engagement consistent with applicable rules of professional conduct.</em></p>
       </div>
       <hr>
