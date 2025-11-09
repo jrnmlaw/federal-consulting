@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Federal Lab Engagement & Tech Transfer Consulting</title>
   <style>
-    /* Global styles */
     body {
       font-family: "Times New Roman", Times, serif;
       margin: 0;
@@ -16,6 +15,30 @@
       color: #000000;
     }
 
+      .page-title {
+        font-size: 2.3rem;
+        font-weight: 500;
+        color: #2c3e50;
+        font-family: 'Merriweather', serif;
+        text-align: center;
+        margin-bottom: 0;
+        line-height: 1.3;
+        display: inline-block;
+        width: 100%;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #e0e0e0;
+      }
+    
+      .page-subtitle {
+        text-align: center;
+        font-size: 1.15rem;
+        font-weight: 300;
+        color: #4a6a85;
+        margin-top: 8px;
+        margin-bottom: 30px;
+        font-family: "Arial", sans-serif;
+        line-height: 1.4;
+      }
     .container {
       max-width: 800px;
       width: 90%;
@@ -28,21 +51,13 @@
       padding: 20px;
     }
 
-    h1, h2, h3 {
-      margin-top: 1.5em;
-      margin-bottom: 0.5em;
-      line-height: 1.3;
-    }
-
-    h1 {
-      font-family: 'Merriweather', serif;
-      font-weight: 500;
-    }
-
     h2, h3 {
       font-family: Arial, sans-serif;
       font-weight: 300;
       color: #2c3e50;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      line-height: 1.3;
     }
 
     h2 {
@@ -64,37 +79,6 @@
 
     .section {
       margin-bottom: 40px;
-    }
-
-    /* Page title and subtitle */
-    .page-header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .page-title {
-      font-size: 2.3rem;
-      font-weight: 500;
-      color: #2c3e50;
-      font-family: 'Merriweather', serif;
-      line-height: 1.3;
-      margin-top: 50px;
-      margin-bottom: 0;
-      display: inline-block;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #e0e0e0;
-      width: 100%;
-    }
-
-    .page-subtitle {
-      text-align: center;
-      font-size: 1.15rem;
-      font-weight: 300;
-      color: #4a6a85;
-      margin-top: 8px;
-      margin-bottom: 30px;
-      font-family: "Arial", sans-serif;
-      line-height: 1.4;
     }
 
     /* Accordion styles */
@@ -188,12 +172,13 @@
       border-top: 1px solid #e0e0e0;
     }
 
-    /* Footer styles */
+    /* Fixed footer */
     .footer {
       position: fixed;
       bottom: 0;
       width: 100%;
-      background: linear-gradient(to right, #2c3e50, #4a6a85);
+      background-color: #2c3e50;
+      border-top: 2px solid #4a6a85;
       color: #ffffff;
       font-family: Arial, sans-serif;
       font-size: 0.95rem;
@@ -214,12 +199,22 @@
       color: #ffffff;
       text-decoration: none;
     }
-
+    
     .footer a.footer-link:hover {
       text-decoration: underline;
     }
 
     @media screen and (max-width: 600px) {
+      .page-title {
+  font-size: 1.8rem;
+  margin-top: 30px;
+}
+
+.page-subtitle {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
       h1 { font-size: 1.8rem; }
       h2 { font-size: 1.3rem; }
       h3 { font-size: 1.1rem; }
@@ -240,16 +235,6 @@
         text-align: center;
         gap: 10px;
       }
-
-      .page-title {
-        font-size: 1.8rem;
-        margin-top: 30px;
-      }
-
-      .page-subtitle {
-        font-size: 1rem;
-        margin-bottom: 20px;
-      }
     }
   </style>
 </head>
@@ -257,20 +242,14 @@
   <div class="container">
     <div class="main-content">
 
-      <!-- Page Header -->
-      <div class="page-header">
-        <h1 class="page-title">Lab Engagement & Tech Transfer Consulting</h1>
-        <p class="page-subtitle">
-          Expert guidance for companies collaborating with DOE, DoD, and federal research laboratories.
-        </p>
-      </div>
+      <h1 class="page-title">Lab Engagement & Tech Transfer Consulting</h1>
+      <p class="page-subtitle">Expert guidance for industry partners collaborating with federal research laboratories</p>
 
-      <!-- Sections -->
+
       <div class="section">
         <h2>Helping Industry Navigate Laboratory Agreements with Clarity</h2>
         <p>With years of experience working within the Department of Energy (DOE) National Laboratory system, I provide specialized consulting for companies seeking to partner with DOE, the Department of Defense (DoD), or other federal laboratory and research institutions. Whether you’re preparing to engage through a Cooperative Research and Development Agreement (CRADA), Strategic Partnership Project (SPP), or other collaborative mechanism, expert advice and guidance can lead to more efficient, strategic navigation of federal processes and requirements. I help you navigate the legal and procedural landscape with clarity and strategy.</p>
       </div>
-
       <hr>
 
       <div class="section">
@@ -287,10 +266,46 @@
           </div>
         </div>
 
-        <!-- Additional use cases remain unchanged -->
+        <div class="use-case">
+          <button class="accordion-header">Use Case 2: SMR Developer Seeking to Fund R&D Through an SPP Agreement</button>
+          <div class="accordion-content">
+            <p><strong>How I Help:</strong> I advise the Small Modular Reactor (SMR) developer on the nuances of SPP authority, especially where export control, classification, and data dissemination restrictions apply. I work with the client to define a compliant statement of work, navigate pre-negotiation discussions, and understand how the Atomic Energy Act may limit downstream data use or publication.</p>
+            <p><strong>Outcome:</strong> A clear project scope aligned with DOE mission space and legal requirements, an executed SPP agreement with minimal rework, and safeguards in place for proprietary modeling tools and inputs.</p>
+          </div>
+        </div>
 
+        <div class="use-case">
+          <button class="accordion-header">Use Case 3: AI Surveillance Firm Engaging with a National Lab on Autonomy R&D</button>
+          <div class="accordion-content">
+            <p><strong>How I Help:</strong> I help the client assess appropriate engagement mechanisms (e.g., CRADA vs. User Agreement) and advise on the allocation of intellectual property arising from jointly developed software. I also flag potential concerns around government use rights, background IP protections, and publication delays due to DoD review requirements.</p>
+            <p><strong>Outcome:</strong> The client enters negotiations well-informed, avoids post-award surprises, and secures favorable terms for future commercialization of the AI stack—all while maintaining compliance with federal obligations.</p>
+          </div>
+        </div>
+
+        <div class="use-case">
+          <button class="accordion-header">Use Case 4: Quantum Technology Company Pursuing a User Agreement</button>
+          <div class="accordion-content">
+            <p><strong>How I Help:</strong> I guide the client through the lab’s facility access and user agreement process, clarifying key differences between proprietary and non-proprietary research terms. I help structure the project to align with the lab’s policies while protecting the company’s pre-existing IP and data rights, including how any resulting technical data will be handled.</p>
+            <p><strong>Outcome:</strong> The company secures facility access under a favorable agreement, with clear boundaries around data sharing, publication, and background technology—accelerating R&D timelines while minimizing legal risk.</p>
+          </div>
+        </div>
+
+        <div class="use-case">
+          <button class="accordion-header">Use Case 5: Cybersecurity Firm Collaborating on Critical Infrastructure Resilience</button>
+          <div class="accordion-content">
+            <p><strong>How I Help:</strong> I advise the company on structuring the collaboration under a CRADA, ensuring that data classification, publication restrictions, and foreign national access controls are clearly understood. I also help the client assert appropriate rights in their background technology and define terms for joint software development and evaluation metrics.</p>
+            <p><strong>Outcome:</strong> The company negotiates a CRADA that preserves IP, accommodates classified or sensitive data protocols, and establishes a shared roadmap for future joint development opportunities.</p>
+          </div>
+        </div>
+
+        <div class="use-case">
+          <button class="accordion-header">Use Case 6: Advanced Materials Manufacturer Licensing a National Lab Innovation</button>
+          <div class="accordion-content">
+            <p><strong>How I Help:</strong> I support the client in parallel licensing and SPP negotiations—advising on license terms, field-of-use definitions, and royalty structures, while coordinating the SPP agreement to allow for proprietary technical inputs. I also help the company evaluate the Bayh-Dole implications for any new inventions that may arise under the collaboration.</p>
+            <p><strong>Outcome:</strong> The company secures both a commercial license and a custom SPP agreement, enabling early product development with reduced legal ambiguity around ownership, improvements, and commercialization rights.</p>
+          </div>
+        </div>
       </div>
-
       <hr>
       <div class="lets-talk-box">
         <h2>Let’s Talk</h2>
@@ -298,22 +313,52 @@
         <p>
           📧 <strong>Email:</strong> <span id="email-talk"></span><br>
           📞 <strong>Phone:</strong> <span id="phone-talk"></span><br>
-          🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rogersjohn/" target="_blank">www.linkedin.com/in/rogersjohn/</a>
+          🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rogersjohn/" target="_blank">/in/rogersjohn/</a>
         </p>
         <p class="disclaimer"><em>Note: While I am a licensed attorney, my consulting services do not constitute legal representation unless expressly agreed to in writing. Any legal advice or representation will be clearly defined through a formal engagement consistent with applicable rules of professional conduct.</em></p>
       </div>
-
       <hr>
-
-      <!-- Additional sections remain unchanged -->
-
+      <div class="section">
+        <h2>What I Do</h2>
+        <p>Whether your collaboration is federally funded or privately backed, I offer expert insights to help you proceed with confidence and clarity.</p>
+        <ul>
+          <li><strong>Evaluate Partnership Pathways</strong> with DOE, DoD, and other federal labs and research facilities.</li>
+          <li><strong>Guide Proposal Preparation</strong> for Funding Opportunity Announcements (FOAs) and Notices of Funding Opportunity (NOFOs), specifically oriented toward assisting your proposal writers to maximize impact.</li>
+          <li><strong>Advise on Agreement Strategy</strong> for CRADA, SPP, and other federal engagement tools.</li>
+          <li><strong>Assess Appropriate Engagement Mechanisms</strong> (e.g., CRADAs, SPPs, User Agreements, and Technical Assistance Agreements, etc.)</li>
+          <li><strong>Provide Pre- and Post-Award Guidance</strong> to streamline negotiations and reduce time to execution.</li>
+          <li><strong>Interpret Applicable Legislation and Regulations</strong> governing intellectual property rights, data protections, and contractual authority.</li>
+          <li><strong>Help Protect Your Interests</strong> by identifying opportunities to enhance intellectual property rights and technical data protection.</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="section">
+        <h2>Grounded in Federal Law and Policy</h2>
+        <p>Federal technology transfer is shaped by a robust legal foundation. My approach is informed by in-depth knowledge of the legislative and regulatory framework that governs these activities, including:</p>
+        <ul>
+          <li><strong>The Bayh-Dole Act (1980)</strong> – Enabling small businesses and non-profits to retain rights to inventions made with federal funding, while establishing obligations related to invention reporting and commercialization.</li>
+          <li><strong>The Stevenson-Wydler Technology Innovation Act (1980)</strong> – Creating the legal basis for technology transfer from federal laboratories to the private sector, and authorizing mechanisms like CRADAs.</li>
+          <li><strong>The Morella Amendments (2001)</strong> – Enhancing the tech transfer mission by elevating the role of the Office of Research and Technology Applications (ORTA) and streamlining IP licensing practices.</li>
+          <li><strong>The Atomic Energy Act (1954, as amended)</strong> – Governing the control and dissemination of nuclear technology and associated data, especially relevant in areas like fusion energy and advanced reactor R&amp;D, and as the legislative authority for DOE SPP activities.</li>
+        </ul>
+        <p>Understanding how these authorities interact is essential to structuring successful, compliant collaborations—especially in high-stakes or emerging technology fields.</p>
+      </div>
+      <hr>
+      <div class="section">
+        <h2>Why Work With Me?</h2>
+        <p>I’m not just familiar with the agreements—I understand how they are implemented within the context of federal authority and mission-driven R&amp;D environments.</p>
+        <ul>
+          <li><strong>Accelerate Time to Agreement</strong> by anticipating and avoiding common negotiation hurdles.</li>
+          <li><strong>Enhance Strategic Positioning</strong> in areas like intellectual property, technical data rights, and publication.</li>
+          <li><strong>Navigate Regulatory and Institutional Complexity</strong> with greater confidence and foresight.</li>
+        </ul>
+      </div>
+      <hr>
     </div>
   </div>
 
   <!-- Footer -->
   <div class="footer">
-    <div>John Rogers</div>
-    <div id="phone-footer"></div>
     <div id="email-footer"></div>
   </div>
 
