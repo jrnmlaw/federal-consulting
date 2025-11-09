@@ -142,6 +142,39 @@
 
     .lets-talk-box p { margin-bottom: 15px; }
 
+    .lets-talk-content {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    
+    .lets-talk-content p {
+      flex: 1 1 300px; /* Allows text to shrink or grow */
+    }
+    
+    .lets-talk-headshot {
+      max-width: 150px;
+      width: 100%;
+      height: auto;
+      border-radius: 50%; /* Optional: makes the headshot circular */
+      flex-shrink: 0; /* Prevent image from shrinking too small */
+    }
+    
+    /* Mobile responsiveness */
+    @media screen and (max-width: 600px) {
+      .lets-talk-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      .lets-talk-headshot {
+        margin-top: 15px;
+        max-width: 100px;
+      }
+    }
+    
     .disclaimer { font-size: 0.9em; color: #555; }
 
     hr {
@@ -262,13 +295,18 @@
 
       <div class="lets-talk-box">
         <h2>Let’s Talk</h2>
-        <p>If your organization is preparing to collaborate with a DOE lab, DoD facility, or other federally funded research and development center (FFRDC), I can help ensure you’re well-positioned—both contractually and strategically.</p>
-        <p>
-          📧 <strong>Email:</strong> <span id="email-talk"></span><br>
-          🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rogersjohn/" target="_blank" rel="noopener noreferrer">/in/rogersjohn/</a>
-          <span id="phone-talk" style="display:none;"></span>
-        </p>
-        <p class="disclaimer"><em>Note: While I am a licensed attorney, my consulting services do not constitute legal representation unless expressly agreed to in writing. Any legal advice or representation will be clearly defined through a formal engagement consistent with applicable rules of professional conduct.</em></p>
+        <div class="lets-talk-content">
+          <p>
+            If your organization is preparing to collaborate with a DOE lab, DoD facility, or other federally funded research and development center (FFRDC), I can help ensure you’re well-positioned—both contractually and strategically.
+          </p>
+          <p>
+            📧 <strong>Email:</strong> <span id="email-talk"></span><br>
+            🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rogersjohn/" target="_blank">www.linkedin.com/in/rogersjohn/</a>
+            <span id="phone-talk" style="display:none;"></span>
+          </p>
+          <p class="disclaimer"><em>Note: While I am a licensed attorney, my consulting services do not constitute legal representation unless expressly agreed to in writing. Any legal advice or representation will be clearly defined through a formal engagement consistent with applicable rules of professional conduct.</em></p>
+          <img src="https://i.imgur.com/TbgUbvH.jpeg" alt="John Rogers Headshot" class="lets-talk-headshot">
+        </div>
       </div>
       <hr>
 
