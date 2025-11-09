@@ -144,6 +144,40 @@
 
     .disclaimer { font-size: 0.9em; color: #555; }
 
+    .lets-talk-top {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: flex-start; /* Align top of image with top of paragraph */
+      flex-wrap: wrap;
+    }
+    
+    .lets-talk-top p {
+      flex: 1 1 300px; /* Paragraph takes remaining space */
+      margin: 0;
+    }
+    
+    .lets-talk-headshot {
+      max-width: 150px;
+      width: 100%;
+      height: auto;
+      border-radius: 50%; /* optional circular headshot */
+      flex-shrink: 0; /* prevent shrinking */
+    }
+    
+    /* Mobile responsiveness */
+    @media screen and (max-width: 600px) {
+      .lets-talk-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      .lets-talk-headshot {
+        margin-top: 15px;
+        max-width: 100px;
+      }
+    }
+    
     hr {
       width: 50%;
       margin: 30px auto;
@@ -262,14 +296,22 @@
 
       <div class="lets-talk-box">
         <h2>Let’s Talk</h2>
-        <p>If your organization is preparing to collaborate with a DOE lab, DoD facility, or other federally funded research and development center (FFRDC), I can help ensure you’re well-positioned—both contractually and strategically.</p>
+        <div class="lets-talk-top">
+          <p>
+            If your organization is preparing to collaborate with a DOE lab, DoD facility, or other federally funded research and development center (FFRDC), I can help ensure you’re well-positioned—both contractually and strategically.
+          </p>
+          <img src="https://i.imgur.com/TbgUbvH.jpeg" alt="John Rogers Headshot" class="lets-talk-headshot">
+        </div>
+      
         <p>
           📧 <strong>Email:</strong> <span id="email-talk"></span><br>
-          🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rogersjohn/" target="_blank" rel="noopener noreferrer">/in/rogersjohn/</a>
+          🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rogersjohn/" target="_blank">www.linkedin.com/in/rogersjohn/</a>
           <span id="phone-talk" style="display:none;"></span>
         </p>
+      
         <p class="disclaimer"><em>Note: While I am a licensed attorney, my consulting services do not constitute legal representation unless expressly agreed to in writing. Any legal advice or representation will be clearly defined through a formal engagement consistent with applicable rules of professional conduct.</em></p>
       </div>
+
       <hr>
 
       <div class="section">
